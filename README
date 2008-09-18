@@ -1,0 +1,29 @@
+NumberTwoPencil
+Created by Dan Woolley, September 2008.
+
+
+Education.com API requirements:
+* Docs at http://www.education.com/webservice/documentation/
+* Sign up for an API key at http://www.education.com/webservice/request/
+* Terms of service at http://www.education.com/webservice/terms/
+* This provider is pretty strict about tying your api key to an IP address.  Contact them if you need
+multiple IP's.
+
+
+Library requirements: 
+* gem install json
+
+
+Sample library usage:
+require 'numbertwopencil'
+foo = NumberTwoPencil.new(your_api_key)
+params = { "zip" => "33432" }
+data = foo.education_com_getSchools params
+p data
+data.each {|item| puts "#{item["schoolname"]}\t#{item["gradelevel"]}\t#{item["city"]}"}
+
+
+
+Sample schoolSearch request using curl:
+curl "http://www.education.com/service/service.php?f=schoolSearch&sn=sf&resf=json&key=your_education_com_api_key&zip=33432"
+
