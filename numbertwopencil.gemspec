@@ -1,5 +1,3 @@
-require 'rubygems'
-Gem::manage_gems
 require 'rake/gempackagetask'
 
 Gem::Specification.new do |s|
