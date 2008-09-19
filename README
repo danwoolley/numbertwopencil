@@ -2,6 +2,15 @@ NumberTwoPencil
 Created by Dan Woolley, September 2008.
 
 
+To install from gem:
+$ gem sources -a http://gems.github.com
+$ sudo gem install danwoolley-numbertwopencil --include-dependencies
+
+
+Library requirements: 
+* gem install json			# include-dependencies above should take care of this.
+
+
 Education.com API requirements:
 * Docs at http://www.education.com/webservice/documentation/
 * Sign up for an API key at http://www.education.com/webservice/request/
@@ -10,15 +19,10 @@ Education.com API requirements:
 multiple IP's.
 
 
-Library requirements: 
-* gem install json
-
-
 Sample library usage:
 require 'numbertwopencil'
 foo = NumberTwoPencil.new(your_api_key)
-params = { "zip" => "33432" }
-data = foo.education_com_getSchools params
+data = foo.education_com_getSchools "zip" => "33432"
 p data
 data.each {|item| puts "#{item["schoolname"]}\t#{item["gradelevel"]}\t#{item["city"]}"}
 

@@ -18,7 +18,7 @@ end
 
 Gem::Specification.new do |s|
   s.name     = "numbertwopencil"
-  s.version  = "0.1.2"
+  s.version  = "0.1.3"
   s.date     = "2008-09-18"
   s.summary  = "Ruby library for accessing school data using the education.com web services."
   s.email    = "danwoolley@gmail.com"
@@ -50,6 +50,6 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
   s.add_dependency("diff-lcs", ["> 0.0.0"])
   s.add_dependency("mime-types", ["> 0.0.0"])
-  s.add_dependency("open4", ["> 0.0.0"])
 =end
+  s.add_dependency("json", [">= 1.1.3"])
 end

@@ -4,9 +4,10 @@ foo = NumberTwoPencil.new('0837bf9b58dad3f1d3d64c5a3bfb7e10')
 
 # education_com_getSchools
 begin
-  params = { "zip" => "33486" }
-  data = foo.education_com_getSchools params
+  #params = { "zip" => "33486" }
+  #data = foo.education_com_getSchools params
   #p data
+  data = foo.education_com_getSchools "zip" => "33486"
   data.each {|item| puts "#{item["schoolname"]}\t#{item["gradelevel"]}\t#{item["schoolid"]}"}
 rescue Exception => e
   p e.message
