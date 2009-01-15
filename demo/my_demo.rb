@@ -8,7 +8,8 @@ begin
   #data = foo.education_com_getSchools params
   #p data
   data = foo.education_com_getSchools "zip" => "33486"
-  data.each {|item| puts "#{item["schoolname"]}\t#{item["gradelevel"]}\t#{item["schoolid"]}"}
+  p data
+  #data.each {|item| puts "#{item["schoolname"]}\t#{item["gradelevel"]}\t#{item["schoolid"]}"}
 rescue Exception => e
   p e.message
 end
@@ -40,6 +41,13 @@ end
 # education_com_getSchoolReviews
 begin
   data = foo.education_com_getSchoolReviews '41160'
+  p data
+rescue Exception => e
+  p e.message
+end
+
+begin
+  data = foo.education_com_getBrandingData "city" => "Boca Raton", "state" => "FL"
   p data
 rescue Exception => e
   p e.message

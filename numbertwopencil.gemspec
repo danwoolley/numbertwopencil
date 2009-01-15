@@ -18,8 +18,8 @@ end
 
 Gem::Specification.new do |s|
   s.name     = "numbertwopencil"
-  s.version  = "0.1.3"
-  s.date     = "2008-09-18"
+  s.version  = "0.1.4"
+  s.date     = "2009-01-15"
   s.summary  = "Ruby library for accessing school data using the education.com web services."
   s.email    = "danwoolley@gmail.com"
   s.homepage = "http://github.com/danwoolley/numbertwopencil"

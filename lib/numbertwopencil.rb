@@ -111,6 +111,27 @@ class NumberTwoPencil
     end
   end
 
+  # Example: 
+  # data = foo.education_com_getBrandingData "city" => "Boca Raton", "state" => "FL"
+  # p data
+  def education_com_getBrandingData(params)
+    # Allowed params:  city, state, schoolid, nces_id
+    # Returns an array of school data in hashes, or nil, or raises an error
+
+    url = "#{@@education_com_webservice_url}?sn=sf&f=gbd&resf=json&key=#{@apikey}"
+    params.each { |key, value| url << "&#{key}=#{value}" }
+
+    # The entire JSON data structure
+    data = fetch_result url
+    if data == nil or data.empty?
+      return nil
+    elsif Hash === data and data.has_key?("faultCode")
+      raise "#{data["faultType"].capitalize} #{data["faultCode"]}: #{data["faultString"].capitalize}"
+    else
+      return data
+    end
+  end
+
 private
 
   def fetch_result(url)
