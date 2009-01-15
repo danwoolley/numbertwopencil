@@ -17,7 +17,7 @@ class NumberTwoPencil
   # data = foo.education_com_getSchools params
   # p data
   def education_com_getSchools(params)
-    # Allowed params:  zip, city, state, address, distance, latitude, longitude
+    # Allowed params:  zip, city, state, address, distance, latitude, longitude, minResult
     # Returns an array of school data in hashes, or nil, or raises an error
 
     url = "#{@@education_com_webservice_url}?sn=sf&f=schoolSearch&resf=json&key=#{@apikey}"
