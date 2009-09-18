@@ -135,7 +135,7 @@ class NumberTwoPencil
 private
 
   def fetch_result(url)
-    puts url
+    #puts url
     #data = File.read("sample_data/schoolSearch.json")
     data = Net::HTTP.get_response(URI.parse(URI.escape(url))).body
     return JSON.parse(data) rescue nil
