@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "numbertwopencil"
-  s.version  = "0.1.5"
+  s.version  = "0.1.6"
   s.date     = "2009-09-18"
   s.summary  = "Ruby library for accessing school data using the education.com web services."
   s.email    = "danwoolley@gmail.com"
