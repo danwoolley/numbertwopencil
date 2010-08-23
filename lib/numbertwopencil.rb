@@ -5,7 +5,7 @@ require 'json'    # gem install json
 
 class NumberTwoPencil
   
-  @@education_com_webservice_url = 'http://www.education.com/service/service.php'
+  @@education_com_webservice_url = 'http://api.education.com/service/service.php'
    
   # foo = NumberTwoPencil.new('your-education_com-api-key)
   def initialize(apikey)
